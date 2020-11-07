@@ -128,7 +128,7 @@ async function splitMode() {
     if(params.length !== 2) {
         console.log("Слишком мало аргументов");
     }
-    let secret = params[0];
+    let secret = params[0].trimStart();
     let n_t = params[1];
 
     let secretNum = BigInt(secret.startsWith('0x') ? secret : '0x' + secret);
